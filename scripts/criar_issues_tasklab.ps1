@@ -38,6 +38,8 @@ $labels = @(
     @{ name="equipe-03"; color="fbca04"; desc="Atividades da Equipe 03 - Filtros e Contadores" },
     @{ name="equipe-04"; color="d93f0b"; desc="Atividades da Equipe 04 - Edição, Exclusão e Busca" },
     @{ name="equipe-05"; color="5319e7"; desc="Atividades da Equipe 05 - Documentação e Acessibilidade" },
+    @{ name="feature"; color="a2eeef"; desc="Nova funcionalidade" },
+    @{ name="documentation"; color="0075ca"; desc="Documentação e guias" },
     @{ name="priority-high"; color="b60205"; desc="Prioridade Alta" },
     @{ name="priority-medium"; color="d93f0b"; desc="Prioridade Média" },
     @{ name="priority-low"; color="0e8a16"; desc="Prioridade Baixa" }
