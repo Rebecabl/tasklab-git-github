@@ -1,0 +1,78 @@
+/* ==========================================================================
+   TaskLab — Gerenciador de Tarefas
+   Laboratório Prático de Git e GitHub
+   Estilos Responsivos: responsive.css
+   ========================================================================== */
+
+/* Dispositivos Médios (Tablets e telas menores que 900px) */
+@media (max-width: 900px) {
+    .content-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .hero-section {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hero-badge {
+        align-self: flex-start;
+    }
+}
+
+/* Dispositivos Pequenos (Celulares e telas menores que 640px) */
+@media (max-width: 640px) {
+    .header-container {
+        flex-direction: column;
+        gap: 12px;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        width: 100%;
+        justify-content: flex-start;
+        overflow-x: auto;
+        padding-bottom: 4px;
+    }
+
+    .nav-link {
+        padding: 6px 10px;
+        font-size: 0.88rem;
+    }
+
+    .main-container {
+        margin: 16px auto;
+        padding: 0 14px;
+    }
+
+    .card-body,
+    .card-header {
+        padding: 16px;
+    }
+
+    .task-item {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+    }
+
+    .task-actions {
+        justify-content: flex-end;
+    }
+
+    .btn-toggle-status {
+        width: 100%;
+        text-align: center;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 16px;
+    }
+
+    .footer-links {
+        justify-content: center;
+    }
+}

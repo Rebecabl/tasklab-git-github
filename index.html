@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskLab — Gerenciador de Tarefas</title>
+    <!-- Folhas de Estilo -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+    <!-- Faixa Informativa Acadêmica -->
+    <div class="lab-banner">
+        <span>🎓 <strong>Tópicos Especiais em Engenharia de Software I — Unidade II</strong> | Docente: Profª Rebeca Barbosa Lourenço</span>
+    </div>
+
+    <!-- Cabeçalho Principal e Navegação -->
+    <header class="main-header">
+        <div class="header-container">
+            <a href="index.html" class="brand">
+                <div class="brand-icon">✓</div>
+                <div>
+                    <h1 class="brand-title">TaskLab</h1>
+                    <span class="brand-subtitle">Laboratório de Colaboração em Software</span>
+                </div>
+            </a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-link active">Início</a></li>
+                    <li><a href="pages/sobre.html" class="nav-link">Sobre o Projeto</a></li>
+                    <li><a href="pages/ajuda.html" class="nav-link">Ajuda</a></li>
+                    <li><a href="https://github.com/Rebecabl/tasklab-git-github" target="_blank" rel="noopener noreferrer" class="nav-link nav-link-btn">GitHub ↗</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main class="main-container">
+        <!-- Banner de Boas-Vindas -->
+        <section class="hero-section">
+            <div class="hero-text">
+                <h1>Painel de Tarefas</h1>
+                <p>Gerencie suas atividades acadêmicas e de desenvolvimento de software em um único lugar com persistência local no navegador.</p>
+            </div>
+            <div class="hero-badge">
+                <span>Versão 1.0 (Base Didática)</span>
+            </div>
+        </section>
+
+        <!-- Grade de Conteúdo: Formulário + Lista de Tarefas -->
+        <div class="content-grid">
+            <!-- Coluna 1: Formulário de Cadastro -->
+            <section class="card" aria-labelledby="titulo-card-form">
+                <div class="card-header">
+                    <h2 id="titulo-card-form" class="card-title">Nova Tarefa</h2>
+                </div>
+                <div class="card-body">
+                    <form id="form-tarefa">
+                        <div class="form-group">
+                            <label for="titulo-tarefa" class="form-label">Título da Tarefa</label>
+                            <input type="text" id="titulo-tarefa" class="form-input" placeholder="Ex: Criar branch de funcionalidade" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="descricao-tarefa" class="form-label">Descrição</label>
+                            <textarea id="descricao-tarefa" class="form-textarea" placeholder="Descreva os detalhes da tarefa..."></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="categoria-tarefa" class="form-label">Categoria</label>
+                            <select id="categoria-tarefa" class="form-select">
+                                <option value="Geral">Geral</option>
+                                <option value="Estudos">Estudos</option>
+                                <option value="Desenvolvimento">Desenvolvimento</option>
+                                <option value="Git & GitHub">Git & GitHub</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" class="btn-primary" id="btn-salvar-tarefa">
+                            <span>+ Adicionar Tarefa</span>
+                        </button>
+                    </form>
+                </div>
+            </section>
+
+            <!-- Coluna 2: Listagem de Tarefas -->
+            <section class="card" aria-labelledby="titulo-card-lista">
+                <div class="card-header">
+                    <h2 id="titulo-card-lista" class="card-title">Tarefas Cadastradas</h2>
+                </div>
+                <div class="card-body">
+                    <!-- Lista dinâmica de tarefas -->
+                    <div id="lista-tarefas" class="tasks-container">
+                        <!-- Itens renderizados via JavaScript (app.js) -->
+                    </div>
+
+                    <!-- Estado Vazio (exibido quando não houver tarefas) -->
+                    <div id="estado-vazio" class="empty-state" style="display: none;">
+                        <div class="empty-state-icon">📋</div>
+                        <h3>Nenhuma tarefa cadastrada</h3>
+                        <p>Preencha o formulário ao lado para cadastrar sua primeira atividade.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <p>&copy; 2026 TaskLab — Desenvolvido para a prática de Git e GitHub | Profª Rebeca Barbosa Lourenço</p>
+            <div class="footer-links">
+                <a href="index.html">Início</a>
+                <a href="pages/sobre.html">Sobre</a>
+                <a href="pages/ajuda.html">Ajuda</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts da Aplicação (Ordem de Dependência: Storage -> Tarefas -> App) -->
+    <script src="js/storage.js"></script>
+    <script src="js/tarefas.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

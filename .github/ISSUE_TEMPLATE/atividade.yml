@@ -1,0 +1,80 @@
+name: Atividade Prática — TaskLab
+description: Modelo para cadastro de atividades individuais e em equipe no laboratório
+title: "[Atividade]: "
+labels: ["feature"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ### 📋 Cadastro de Atividade Prática — TaskLab
+        Preencha os campos abaixo para registrar a tarefa a ser desenvolvida pelo estudante.
+
+  - type: dropdown
+    id: equipe
+    attributes:
+      label: Equipe Responsável
+      description: Selecione a equipe designada para esta atividade.
+      options:
+        - "Equipe 01 — Interface e Experiência do Usuário"
+        - "Equipe 02 — Cadastro de Tarefas"
+        - "Equipe 03 — Organização e Filtros"
+        - "Equipe 04 — Edição e Exclusão"
+        - "Equipe 05 — Documentação e Acessibilidade"
+    validations:
+      required: true
+
+  - type: input
+    id: estudante
+    attributes:
+      label: Estudante Responsável
+      description: Nome do aluno responsável pela implementação.
+      placeholder: Ex: Maria Oliveira
+    validations:
+      required: true
+
+  - type: textarea
+    id: objetivo
+    attributes:
+      label: 🎯 Objetivo da Atividade
+      description: O que esta atividade visa implementar ou melhorar no TaskLab?
+      placeholder: Descreva claramente a meta pedagógica e funcional.
+    validations:
+      required: true
+
+  - type: textarea
+    id: arquivos
+    attributes:
+      label: 📂 Arquivos Envolvidos
+      description: Liste os arquivos que deverão ser criados ou modificados.
+      placeholder: Ex: js/tarefas.js, css/style.css, index.html
+    validations:
+      required: true
+
+  - type: textarea
+    id: criterios
+    attributes:
+      label: ✅ Critérios de Aceitação
+      description: Quais condições devem ser cumpridas para que a atividade seja aprovada?
+      placeholder: |
+        - [ ] Condição 1: Não permitir títulos em branco.
+        - [ ] Condição 2: Exibir mensagem em vermelho caso o campo esteja vazio.
+    validations:
+      required: true
+
+  - type: textarea
+    id: orientacoes_teste
+    attributes:
+      label: 🧪 Orientações de Teste
+      description: Como o estudante e o revisor devem testar o resultado no navegador?
+      placeholder: 1. Abrir index.html; 2. Clicar em tal botão; 3. Verificar o resultado.
+    validations:
+      required: true
+
+  - type: textarea
+    id: resultado_esperado
+    attributes:
+      label: 🏆 Resultado Esperado
+      description: O que deve acontecer quando a funcionalidade estiver concluída com sucesso?
+      placeholder: A interface atualiza automaticamente e os dados persistem no LocalStorage.
+    validations:
+      required: true
